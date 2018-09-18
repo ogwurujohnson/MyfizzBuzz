@@ -1,0 +1,6 @@
+language: node_js
+node_js:
+  - "stable"
+script: "npm run-script test-travis"
+# send coverage data to coveralls
+after_script: "cat ./coverage/Icov.info | ./node_modules/coveralls/bin/coveralls.js"
